@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link , BrowserRouter} from 'react-router-dom';
 
 // サンプルの記事データ
 const samplePosts = [
@@ -33,7 +33,7 @@ const Blog = () => {
   );
 
   return (
-    <div>
+    <BrowserRouter>
     <h1>ブログ</h1>
     <input
         type="text"
@@ -50,7 +50,7 @@ const Blog = () => {
         </div>
         </Link>
     ))}
-    </div>
+    </BrowserRouter>
   );
 };
 
