@@ -2,11 +2,13 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import Blog from "./components/content/Blog";
+import Article from './components/content/Article';
+import RouterComponent from './components/content/Router';
 
 function App() {
   return (
     <div className="App">
-      <Blog />
+      <RouterComponent/>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
