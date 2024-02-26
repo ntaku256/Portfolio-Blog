@@ -7,6 +7,7 @@ const RouterComponent: React.FC = () => {
   return (
     <div>
       <h1>oooooooooooooooooooooooooo</h1>
+      <Blog/>
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<Blog/>}/>
