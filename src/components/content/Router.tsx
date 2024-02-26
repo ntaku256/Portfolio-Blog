@@ -16,12 +16,12 @@ const RouterComponent: React.FC = () => {
       <PathDisplay />
       <Blog/>
       <Article/>
-      <BrowserRouter>
+      {/* <BrowserRouter>
       <Routes>
         <Route path='/' element={<Blog/>}/>
         <Route path='/Article/:postId' element={<Article />}/>
       </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 };
