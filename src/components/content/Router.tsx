@@ -10,8 +10,8 @@ const RouterComponent: React.FC = () => {
       <Blog/>
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Blog/>}/>
-        <Route path='/Article/:postId' element={<Article />}/>
+        <Route path='/Portfolio-Blog/' element={<Blog/>}/>
+        <Route path='/Portfolio-Blog/Article/:postId' element={<Article />}/>
       </Routes>
       </BrowserRouter>
     </div>
