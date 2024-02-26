@@ -42,7 +42,7 @@ const Blog = () => {
         onChange={handleSearch}
     />
     {filteredPosts.map(post => (
-        <Link to={`/Article/${post.id}`} key={post.id} style={styles.postContainer}>
+        <Link to={`/Portfolio-Blog/Article/${post.id}`} key={post.id} style={styles.postContainer}>
         <div style={styles.postContent}>
             <h2 style={styles.title}>{post.title}</h2>
             <p>投稿者: {post.author}</p>
