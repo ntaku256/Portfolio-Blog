@@ -14,12 +14,12 @@ const RouterComponent: React.FC = () => {
     <div>
       <h1>oooooooooooooooooooooooooo</h1>
       <PathDisplay />
-      <BrowserRouter>
+      {/* <BrowserRouter>
       <Routes>
         <Route path='/' element={<Blog/>}/>
         <Route path='/Article/:postId' element={<Article />}/>
       </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 };
