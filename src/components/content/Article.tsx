@@ -8,11 +8,12 @@ const Article = () => {
   const [markdownContent, setMarkdownContent] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const basePath = process.env.PUBLIC_URL || "/";
 
   useEffect(() => {
     const fetchMarkdownContent = async () => {
       try {
-        const response = await fetch(`/articles/${postId}.md`);
+        const response = await fetch(`${basePath}/articles/${postId}.md`);
         if (!response.ok || response.status !== 200) {
           throw new Error('ファイルが見つかりませんでした。');
         }
