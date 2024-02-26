@@ -6,7 +6,7 @@ import Blog from './components/content/Blog';
 function App() {
   return (
     <div className="App">
-      <RouterComponent/>
+      <Blog/>
     </div>
   );
 }
