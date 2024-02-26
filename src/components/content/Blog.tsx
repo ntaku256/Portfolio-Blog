@@ -33,7 +33,7 @@ const Blog = () => {
   );
 
   return (
-    <BrowserRouter>
+    <div>
     <h1>ブログ</h1>
     <input
         type="text"
@@ -50,7 +50,7 @@ const Blog = () => {
         </div>
         </Link>
     ))}
-    </BrowserRouter>
+    </div>
   );
 };
 

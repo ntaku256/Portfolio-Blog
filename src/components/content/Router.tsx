@@ -13,15 +13,15 @@ const RouterComponent: React.FC = () => {
   return (
     <div>
       <h1>oooooooooooooooooooooooooo</h1>
-      <PathDisplay />
+      {/* <PathDisplay />
       <Blog/>
-      <Article/>
-      {/* <BrowserRouter>
+      <Article/> */}
+      <BrowserRouter>
       <Routes>
         <Route path='/' element={<Blog/>}/>
         <Route path='/Article/:postId' element={<Article />}/>
       </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </div>
   );
 };
