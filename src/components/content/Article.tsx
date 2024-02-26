@@ -12,7 +12,7 @@ const Article = () => {
   useEffect(() => {
     const fetchMarkdownContent = async () => {
       try {
-        const response = await fetch(`/Portfolio-Blog/articles/README.md`);
+        const response = await fetch(`/Portfolio-Blog/articles/${postId}.md`);
         if (!response.ok || response.status !== 200) {
           throw new Error('ファイルが見つかりませんでした。');
         }

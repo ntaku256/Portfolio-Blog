@@ -7,7 +7,7 @@ import Article from './components/content/Article';
 function App() {
   return (
     <div className="App">
-      <Article/>
+      <RouterComponent/>
     </div>
   );
 }
