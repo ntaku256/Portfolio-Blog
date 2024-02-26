@@ -6,7 +6,7 @@ import Article from './Article';
 const PathDisplay = () => {
   const location = useLocation();
 
-  return <div>Current Path: {location.pathname}</div>;
+  return <div>Path: {location.pathname}</div>;
 };
 
 const RouterComponent: React.FC = () => {
@@ -16,7 +16,7 @@ const RouterComponent: React.FC = () => {
       <PathDisplay />
       <Routes>
         <Route path='/Portfolio-Blog/' element={<Blog/>}/>
-        <Route path='/Article/:postId' element={<Article />}/>
+        <Route path='/Portfolio-Blog/Article/:postId' element={<Article />}/>
       </Routes>
     </div>
   );
