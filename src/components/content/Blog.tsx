@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link , BrowserRouter} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // サンプルの記事データ
 const samplePosts = [
