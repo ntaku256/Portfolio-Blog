@@ -5,12 +5,15 @@ import Article from './Article';
 
 const RouterComponent: React.FC = () => {
   return (
-    <BrowserRouter>
+    <div>
+      <h1>oooooooooooooooooooooooooo</h1>
+      <BrowserRouter>
       <Routes>
-        <Route path='/Portfolio-Blog/' element={<Blog/>}/>
-        <Route path='/Portfolio-Blog/Article/:postId' element={<Article />}/>
+        <Route path='/' element={<Blog/>}/>
+        <Route path='/Article/:postId' element={<Article />}/>
       </Routes>
-    </BrowserRouter>
+      </BrowserRouter>
+    </div>
   );
 };
 
