@@ -6,7 +6,7 @@ import Article from './Article';
 const PathDisplay = () => {
   const location = useLocation();
 
-  return <div>Current Path: location.pathname</div>;
+  return <div>Current Path: {location.pathname}</div>;
 };
 
 const RouterComponent: React.FC = () => {
