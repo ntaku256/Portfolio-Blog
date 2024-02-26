@@ -14,8 +14,6 @@ const RouterComponent: React.FC = () => {
     <div>
       <h1>oooooooooooooooooooooooooo</h1>
       <PathDisplay />
-      <Blog/>
-      <Article/>
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<Blog/>}/>
