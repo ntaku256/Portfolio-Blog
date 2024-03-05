@@ -12,8 +12,7 @@ const PathDisplay = () => {
 const RouterComponent: React.FC = () => {
   return (
     <div>
-      <h1>oooooooooooooooooooooooooo</h1>
-      <PathDisplay />
+      {/* <PathDisplay /> */}
       <Routes>
         <Route path='/' element={<Blog/>}/>
         <Route path='/Article/:postId' element={<Article />}/>

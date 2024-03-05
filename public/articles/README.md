@@ -7,10 +7,7 @@
 - 昆虫の群れなどにおいては，適当な経路を発見した一匹に残りの群れが素早く追従することができるが，これを多次元空間において位置と速度を持つ粒子群でモデル化したもの
 
 <img src="https://github.com/ntaku256/AI/blob/main/Source/PSO.png" width="80%">
-
 https://qiita.com/opticont/items/04a5b4ff41483966987f
-
-
 
 # オセロAI
 ### 評価マップ
