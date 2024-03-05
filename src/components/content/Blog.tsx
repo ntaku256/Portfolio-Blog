@@ -1,28 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-// サンプルの記事データ
-const samplePosts = [
-  {
-    id: 'README',
-    title: 'Reactでブログを作ろう',
-    content: 'Reactを使ってシンプルなブログを作る方法を紹介します。',
-    author: 'John Doe',
-    date: '2024-02-24'
-  },
-  {
-    id: 2,
-    title: 'React Hooksの使い方',
-    content: 'useStateやuseEffectなどのReact Hooksの基本的な使い方について解説します。',
-    author: 'Jane Smith',
-    date: '2024-02-23'
-  }
-];
+interface Post {
+  id: number;
+  title: string;
+  content: string;
+  author: string;
+  date: string;
+}
 
 const Blog = () => {
-  const [posts, setPosts] = useState(samplePosts);
-  const [searchTerm, setSearchTerm] = useState<string>('');
-
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const basePath = process.env.PUBLIC_URL || "";
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${basePath}/articles/title.json`);
+        const data = await response.json();
+        setPosts(data);
+      } catch (error) {
+      console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  },[]);
+  
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
   };
@@ -32,29 +35,38 @@ const Blog = () => {
     post.content.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  return (
+    return (
     <div>
-    <h1>ブログ</h1>
-    <input
-        type="text"
-        placeholder="記事を検索"
-        value={searchTerm}
-        onChange={handleSearch}
-    />
-    {filteredPosts.map(post => (
-        <Link to={`/Article/${post.id}`} key={post.id} style={styles.postContainer}>
-        <div style={styles.postContent}>
-            <h2 style={styles.title}>{post.title}</h2>
-            <p>投稿者: {post.author}</p>
-            <p>投稿日: {post.date}</p>
-        </div>
-        </Link>
-    ))}
+      <h1>ブログ</h1>
+      <input
+          type="text"
+          placeholder="記事を検索"
+          value={searchTerm}
+          onChange={handleSearch}
+      />
+      <div style={styles.postGrid}>
+        {filteredPosts.map(post => (
+            <Link to={`/Article/${post.id}`} key={post.id} style={styles.postContainer}>
+            <div style={styles.postContent}>
+                <h2 style={styles.title}>{post.title}</h2>
+                <p style={styles.content}>{post.content}</p>
+                <p>投稿者: {post.author}</p>
+                <p>投稿日: {post.date}</p>
+            </div>
+            </Link>
+        ))}
+      </div>
     </div>
   );
 };
 
 const styles = {
+    postGrid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(4, 1fr)',
+      gap: '20px',
+      padding: 16,
+    },
     postContainer: {
       textDecoration: 'none',
       color: 'inherit',
@@ -66,12 +78,15 @@ const styles = {
       borderRadius: 8,
       padding: 16,
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-      cursor: 'pointer'
+      cursor: 'pointer',
     },
     title: {
       color: '#333',
       marginBottom: 8,
       textDecoration: 'underline'
+    },
+    content:{
+      height: '100px',
     }
   };
 
