@@ -8,8 +8,9 @@ type MdImageType = {
 
 const MdImage: FC<MdImageType> = (props) => {
   const { src, alt, title } = { ...props };
+  const basePath = process.env.PUBLIC_URL || "";
 
-  return <img src={src} alt={alt} title={title} width="80%" />;
+  return <img src={basePath+src} alt={alt} title={title} width="80%" />;
 };
 
 export default MdImage;
