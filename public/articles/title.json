@@ -1,29 +1,64 @@
 [
     {
+        "id": "Blog-Creat",
+        "title": "ブログの作成",
+        "content": "このブログの作成記録を書いています",
+        "author": "Nakaya",
+        "date": "2024-03-06"
+    },
+    {
+        "id": "Blog-Creat1",
+        "title": "ブログ作成その1",
+        "content": "ReactとGithub Pages、Github Actionsで静的ページを立ち上げよう",
+        "author": "Nakaya",
+        "date": "2024-03-06"
+    },
+    {
+        "id": "Blog-Creat2",
+        "title": "ブログ作成その2",
+        "content": "BrowserRouterの謎のエラー",
+        "author": "Nakaya",
+        "date": "2024-03-06"
+    },
+    {
+        "id": "Blog-Creat3",
+        "title": "ブログ作成その3",
+        "content": "ローカルとリモートで異なるパスを扱う,Basepathの指定",
+        "author": "Nakaya",
+        "date": "2024-03-06"
+    },
+    {
+        "id": "Blog-Creat4",
+        "title": "ブログ作成その4",
+        "content": "Markdown形式で記事を表示しよう",
+        "author": "Nakaya",
+        "date": "2024-03-06"
+    },
+    {
         "id": "README",
         "title": "InstaBae Algorithm",
-        "content": "Reactを使ってシンプルなブログを作る方法を紹介します。",
+        "content": "テストです",
         "author": "Nakaya",
         "date": "2024-02-24"
     },
     {
         "id": "test",
         "title": "React Hooksの使い方",
-        "content": "useStateやuseEffectなどのReact Hooksの基本的な使い方について解説します。",
+        "content": "テストです",
         "author": "Jane Smith",
         "date": "2024-02-23"
     },
     {
         "id": "Go-React-Todo",
         "title": "InstaBae Algorithm",
-        "content": "Reactを使ってシンプルなブログを作る方法を紹介します。",
+        "content": "テストです",
         "author": "Nakaya",
         "date": "2024-02-24"
     },
     {
         "id": "Neural_Network",
         "title": "InstaBae Algorithm",
-        "content": "Reactを使ってシンプルなブログを作る方法を紹介します。",
+        "content": "テストです",
         "author": "Nakaya",
         "date": "2024-02-24"
     }

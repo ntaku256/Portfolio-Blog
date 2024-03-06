@@ -50,8 +50,7 @@ const Blog = () => {
             <div style={styles.postContent}>
                 <h2 style={styles.title}>{post.title}</h2>
                 <p style={styles.content}>{post.content}</p>
-                <p>投稿者: {post.author}</p>
-                <p>投稿日: {post.date}</p>
+                <p>更新日: {post.date}</p>
             </div>
             </Link>
         ))}
