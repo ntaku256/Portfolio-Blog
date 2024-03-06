@@ -15,8 +15,11 @@ const CodeBlock: React.FC<CodeBlockProps>  = ({ inline, className, children }) =
   const lang = match && match[1] ? match[1] : "";
   return (
     <SyntaxHighlighter
-      customStyle={{ background: undefined }}
+      customStyle={{ 
+        background: undefined,
+      }}
       style={okaidia}
+      showLineNumbers={true}
       language={lang}
       children={String(children).replace(/\n$/, "")}
     />

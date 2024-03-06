@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useParams } from 'react-router-dom';
 import CodeBlock from '../markdown/CodeBlock';
+import MdImage from '../markdown/MdImage';
 import '../markdown/Markdown.css';
 import remarkGfm from 'remark-gfm';
-import 'github-markdown-css/github-markdown.css';
+import 'github-markdown-css/github-markdown-light.css';
 
 const Article = () => {
   const { postId } = useParams<{ postId: string }>();
@@ -51,7 +52,8 @@ const Article = () => {
           className='markdown-body'
           children={markdownContent}
           components={{
-            code: CodeBlock,
+            code: CodeBlock,  
+            img: MdImage,
         }}/>
       </div>
     </div>
