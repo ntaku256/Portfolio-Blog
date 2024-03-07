@@ -36,8 +36,7 @@ const Blog = () => {
   );
 
     return (
-    <div>
-      <h1>ブログ</h1>
+    <div className='blog-title'>
       <input
           type="text"
           placeholder="記事を検索"
@@ -49,6 +48,7 @@ const Blog = () => {
             <Link to={`/Article/${post.id}`} key={post.id} style={styles.postContainer}>
             <div style={styles.postContent}>
                 <h2 style={styles.title}>{post.title}</h2>
+                <hr />
                 <p style={styles.content}>{post.content}</p>
                 <p>更新日: {post.date}</p>
             </div>
@@ -73,10 +73,11 @@ const styles = {
       display: 'block'
     },
     postContent: {
+      backgroundColor: 'rgb(252, 248, 242)',
       border: '1px solid #ccc',
       borderRadius: 8,
       padding: 16,
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
       cursor: 'pointer',
     },
     title: {

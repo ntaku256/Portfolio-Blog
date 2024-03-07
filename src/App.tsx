@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import RouterComponent from './components/content/Router';
 import { BrowserRouter } from 'react-router-dom';
+import Header from './components/content/Header';
 
 function App() {
   const basePath = process.env.PUBLIC_URL || "/";
@@ -9,6 +10,7 @@ function App() {
   return (
     <BrowserRouter basename={basePath}>
       <div className="App">
+        <Header/>
         <RouterComponent/>
       </div>
     </BrowserRouter>

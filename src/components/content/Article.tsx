@@ -45,7 +45,6 @@ const Article = () => {
 
   return (
     <div>
-      <h1>記事詳細</h1>
       <div className="article">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]} 
