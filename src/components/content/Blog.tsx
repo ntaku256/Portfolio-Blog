@@ -62,7 +62,7 @@ const Blog = () => {
 const styles = {
     postGrid: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(4, 1fr)',
+      gridTemplateColumns: 'repeat(3, 1fr)',
       gap: '20px',
       padding: 16,
     },
@@ -82,7 +82,6 @@ const styles = {
     title: {
       color: '#333',
       marginBottom: 8,
-      textDecoration: 'underline'
     },
     content:{
       height: '100px',

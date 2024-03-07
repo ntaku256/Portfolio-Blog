@@ -10,3 +10,15 @@
 .markdown-body pre {
     background-color: #0d1117 !important;
 }
+
+.markdown-body h1{
+    font-size: 40px !important;
+}
+
+.markdown-body p{
+    font-size: 20px !important;
+}
+
+li{
+    font-size: 20px;
+}

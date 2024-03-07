@@ -62,14 +62,14 @@ export default CodeBlock;
 ```
 - Article.tsx
 ```tsx
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]} 
-          className='markdown-body'
-          children={markdownContent}
-          components={{
-            code: CodeBlock,  
-            img: MdImage,
-        }}/>
+<ReactMarkdown
+  remarkPlugins={[remarkGfm]} 
+  className='markdown-body'
+  children={markdownContent}
+  components={{
+    code: CodeBlock,  
+    img: MdImage,
+}}/>
 ```
 ### 注意点
 - 動作はするが、次のようなエラーが出てしまった。解決方法が分からず動作しているので現状放置している

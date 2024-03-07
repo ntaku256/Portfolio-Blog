@@ -17,6 +17,7 @@ const CodeBlock: React.FC<CodeBlockProps>  = ({ inline, className, children }) =
     <SyntaxHighlighter
       customStyle={{ 
         background: undefined,
+        fontSize: "16px",
       }}
       style={okaidia}
       showLineNumbers={true}
