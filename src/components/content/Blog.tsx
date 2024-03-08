@@ -86,7 +86,7 @@ const styles = {
       marginBottom: 8,
     },
     content:{
-      height: '100px',
+      height:'100px',
     }
   };
 

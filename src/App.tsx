@@ -13,6 +13,7 @@ function App() {
       <div className="App" style={{ 
       backgroundImage: `url(${background})` ,
       backgroundAttachment: "fixed",
+      objectFit:'cover',
       }}>
         <Header/>
         <RouterComponent/>
