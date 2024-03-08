@@ -44,17 +44,15 @@ const Article = () => {
   }
 
   return (
-    <div>
-      <div className="article">
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]} 
-          className='markdown-body'
-          children={markdownContent}
-          components={{
-            code: CodeBlock,  
-            img: MdImage,
-        }}/>
-      </div>
+    <div className="article">
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]} 
+        className='markdown-body'
+        children={markdownContent}
+        components={{
+          code: CodeBlock,  
+          img: MdImage,
+      }}/>
     </div>
   );
 };

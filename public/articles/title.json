@@ -37,28 +37,21 @@
     {
         "id": "README",
         "title": "InstaBae Algorithm",
-        "content": "テストです",
+        "content": "人間がインスタやYouTubeにおいて、より多くのいいねを獲得しようとする動きから着想を得たインスタバエアルゴリズムの実験を行う。",
         "author": "Nakaya",
         "date": "2024-02-24"
     },
     {
-        "id": "test",
-        "title": "React Hooksの使い方",
-        "content": "テストです",
-        "author": "Jane Smith",
-        "date": "2024-02-23"
-    },
-    {
         "id": "Go-React-Todo",
-        "title": "InstaBae Algorithm",
-        "content": "テストです",
+        "title": "Go-React-Todo",
+        "content": "Go(Echo)とReactでTODOアプリを作ってみる",
         "author": "Nakaya",
         "date": "2024-02-24"
     },
     {
         "id": "Neural_Network",
-        "title": "InstaBae Algorithm",
-        "content": "テストです",
+        "title": "Neural_Network",
+        "content": "神経細胞(Neuron)をモデル化した計算素子である人口ニューロン(Artifical Neuron)を組み合わせたもの",
         "author": "Nakaya",
         "date": "2024-02-24"
     }

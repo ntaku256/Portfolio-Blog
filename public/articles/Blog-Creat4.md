@@ -1,7 +1,3 @@
-# ブログ作成その4
-# 更新日
-- 2024/03/06
-
 # Markdown形式で記事を表示しよう
 # 失敗
 - CodeComponentのimportが上手くいかず、たくさんの記事を見たが解決方法が分からなかった。
@@ -27,7 +23,7 @@ posId : mdファイルの名前
 
 https://zenn.dev/techexplorer/scraps/4b780b47216f7d
 
-- CodeBlock.tsx
+### CodeBlock.tsx
 ```tsx
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/cjs/styles/prism";
@@ -60,7 +56,7 @@ const CodeBlock: React.FC<CodeBlockProps>  = ({ inline, className, children }) =
 export default CodeBlock;
 
 ```
-- Article.tsx
+### Article.tsx
 ```tsx
 <ReactMarkdown
   remarkPlugins={[remarkGfm]} 

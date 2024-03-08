@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route , useLocation } from 'react-router-dom';
 import Blog from './Blog';
 import Article from './Article';
+import About from './About';
 
 const PathDisplay = () => {
   const location = useLocation();
@@ -16,6 +17,7 @@ const RouterComponent: React.FC = () => {
       <Routes>
         <Route path='/' element={<Blog/>}/>
         <Route path='/Article/:postId' element={<Article />}/>
+        <Route path='/About' element={<About/>}/>
       </Routes>
     </div>
   );

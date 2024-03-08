@@ -1,7 +1,3 @@
-# ブログ作成その2
-# 更新日
-- 2024/03/06
-
 # 起こったこと
 - React Routerのところで合っているはずなのに、エラーを吐いた
 ```
@@ -27,7 +23,7 @@ https://www.youtube.com/watch?v=pU1r-Hc8_gM
 
 # 修正前
 - Router.tsx
-```
+```tsx
 <BrowserRouter>
     <Routes>
         <Route path='/' element={<Blog/>}/>
@@ -37,18 +33,18 @@ https://www.youtube.com/watch?v=pU1r-Hc8_gM
 ```
 
 # 修正後
-- Router.tsx
+### Router.tsx
+```tsx
+<Routes>
+    <Route path='/' element={<Blog/>}/>
+    <Route path='/Article/:postId' element={<Article />}/>
+</Routes>
 ```
-    <Routes>
-        <Route path='/' element={<Blog/>}/>
-        <Route path='/Article/:postId' element={<Article />}/>
-    </Routes>
-```
-- App.tsx
-```
-    <BrowserRouter basename={basePath}>
-      <div className="App">
-        <RouterComponent/>
-      </div>
-    </BrowserRouter>
+### App.tsx
+```tsx
+<BrowserRouter basename={basePath}>
+    <div className="App">
+    <RouterComponent/>
+    </div>
+</BrowserRouter>
 ```

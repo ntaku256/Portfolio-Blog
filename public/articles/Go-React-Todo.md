@@ -19,22 +19,22 @@ root
 ┃  ┣ docker-compose.yml
 ┃  ┣ go.mod
 ┃  ┣ go.sum
-┃  ┣ main.go
-┣ react-todo (frontend)
-┃  ┣ src
-┃  ┣ public
-┃  ┣ node_modules (gitignore)
-┃  ┣ package.json
-┃  ┣ tsconfig.json
-┃  ┣ .env
-┃  ┣ .eslintrc.cjs
-┃  ┣ package.json
-┃  ┣ tailwind.config.js
-┃  ┣ tsconfig.node.json
-┃  ┣ vite.config.ts
+┃  ┗ main.go
+┗ react-todo (frontend)
+   ┣ src
+   ┣ public
+   ┣ node_modules (gitignore) 
+   ┣ package.json
+   ┣ tsconfig.json
+   ┣ .env
+   ┣ .eslintrc.cjs
+   ┣ package.json
+   ┣ tailwind.config.js
+   ┣ tsconfig.node.json
+   ┗ vite.config.ts
 ```
 
-### Run
+# Run
 - frontend
 ```
 npm start dev

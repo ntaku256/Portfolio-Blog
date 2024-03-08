@@ -8,27 +8,19 @@
 ### 訂正！！人口ニューロン　→ 人工ニューロン
 [画像の参考URL](https://hombre-nuevo.com/machinelearning/machinelearning0001/)
 
-<br>
-
 # 人工ニューロンの中
 ![](https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/Function.png)
 - 入力：X1 ~ Xn
 - 重み(weight)：W1 ~ Wn
 - しきい値：v
 - 出力：z
-<br>
-
 - 積算値：u
 - 伝達関数(または出力関数)：f
- 
-<br>
 
 ### 重みづけとしきい値
 - 人工ニューロンは、神経細胞と似た役割を果たすために2種の数値を持っている。
 1. 入力される複数の情報に重みづけをして足し合わせるための「重みづけの比率」
 2. 足し合わされた情報から意味を引き出すのに必要な「閾値」
-
-<br>
 
 ### 例題  -写真に写る風景が日本の大都市であるか否か-
 - 判断のための条件
@@ -62,21 +54,15 @@ V = 6
 ```
 [参考文献](https://www.ctc-g.co.jp/bestengine/article/2018/0809a_01.html)
 
-<br>
-
 # 伝達関数
 ### ステップ関数(Step Function)
 - 非線形関数で断片的
 <img src="https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/StepFunction.png" width="35%">
 
-<br>
-
 ### シグモイド関数(Sigmoid Function)
 - なめらかな関数で連続的
 - バックプロパゲーションにおける学習の計算処理が容易
 <img src="https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/SigmoidFunction.png" width="70%">
-
-<br>
 
 ### ステップ関数による論理演算
 - OR
@@ -86,9 +72,6 @@ V = 6
 <img src="https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/AND.png" width="50%">
 
 - そのほかにもNOTやXORなどの論理回路を構成可能
-
-<br>
-<br>
 
 # ニューラルネット
 ### フィードフォワード型ネット(Feed Formard Neteork)または階層型ネットワーク(Layerd Network)
@@ -109,8 +92,6 @@ V = 6
 - 重みとしきい値の調節が問題
 - 遺伝的アルゴリズムよりも、バックプロパゲーションのほうが効率的
 
-<br>
-
 # ニューラルネットの種類
 ### 2入力3階層のフィードフォワード型ネットワーク
 <img src="https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/2_3Feedback.png" width="80%">
@@ -119,15 +100,11 @@ V = 6
 - ネットワークの形式を変えれる
   - 層間の結合は必ずしも全結合させる必要がない
   
-<br>
-
 ### リカレントネットワーク ( Recurrent Network )
 <img src="https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/Recurrent.png" width="80%">
 
 - ホップフィールドモデルに基づく
 - ネットワークを構成するすべてのニューロンの入力は、自分以外の人口ニューロンの出力となる
-
-<br>
 
 # サンプルプログラム
 ```C
@@ -303,8 +280,6 @@ data24.txt
 3 1.000000 1.000000 1.000000
 ```
 
-
-<br>
 
 ```C
 /********************************************/

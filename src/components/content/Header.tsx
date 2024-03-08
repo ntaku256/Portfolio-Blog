@@ -16,14 +16,28 @@ const Header = () => {
             </div>
 
             <nav>
-                <ul>
-                    <li>
-                        <Link to="/About">/About</Link>
-                    </li>
-                    <li>
-                        <Link to="/">/Blog</Link>
-                    </li>
-                </ul>
+                <Routes>
+                    <Route path='/About' element={
+                        <ul>
+                            <li>
+                                <Link to="/About" className="select">/About</Link>
+                            </li>
+                            <li>
+                                <Link to="/">/Blog</Link>
+                            </li>
+                        </ul> 
+                    }/>
+                    <Route path='*' element={
+                        <ul>
+                            <li>
+                                <Link to="/About">/About</Link>
+                            </li>
+                            <li>
+                                <Link to="/" className="select">/Blog</Link>
+                            </li>
+                        </ul> 
+                    }/>
+                </Routes>
             </nav>
         </header>
     );

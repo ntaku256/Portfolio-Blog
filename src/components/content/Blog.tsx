@@ -38,6 +38,7 @@ const Blog = () => {
     return (
     <div className='blog-title'>
       <input
+          className='article-search'
           type="text"
           placeholder="記事を検索"
           value={searchTerm}
