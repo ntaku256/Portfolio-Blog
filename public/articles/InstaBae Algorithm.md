@@ -15,11 +15,13 @@ https://qiita.com/opticont/items/04a5b4ff41483966987f
 - マップに価値をつけ、おける場所の中からvalueが高い場所を選択する。
 - 裏返したマスの価値の総和が最大となる手を選択してゆく。
 - アルゴリズムでは、この価値マップをオセロで多くの駒をとれるように何度も試行錯誤して値を変えていく。
-<img src="https://github.com/ntaku256/AI/blob/main/Source/StoneMap.png" width="50%">
+
+![](/images/StoneMap.png)
 
 ### スコアの計算
 - 左の図の例では、右の図のような場所を選択[7][1]するとvalueが (-3) + (-1) + (-1) = -5 になる。
-<img src="https://github.com/ntaku256/AI/blob/main/Source/OseroMap.png" width="100%">
+
+![](/images/OseroMap.png)
 
 ```
 置ける場所とvalue
@@ -255,16 +257,20 @@ speeds[2] =
 ### k-means法（k-means method）
 - 非階層的クラスタリング ・・・ 母集団の中で近いデータをまとめる
 - 入力データ
-<img src="https://github.com/ntaku256/AI/blob/main/Source/kmean1.png" width="60%">
+
+![](/images/kmean1.png)
 
 1. まず、k個のクラスタの代表点（中心）を決める
-<img src="https://github.com/ntaku256/AI/blob/main/Source/kmean2.png" width="60%">
+
+![](/images/kmean2.png)
 
 2. 次に、全てのデータを、もっとも中心が近いクラスタに振り分ける
-<img src="https://github.com/ntaku256/AI/blob/main/Source/kmean3.png" width="60%">
+
+![](/images/kmean3.png)
 
 3. クラスタがまとまったら、再度、各クラスタの重心点（平均値）を計算しし直す。重心点を変えることでデータが分類されるクラスタも変わる。
-<img src="https://github.com/ntaku256/AI/blob/main/Source/kmean4.png" width="60%">
+
+![](/images/kmean4.png)
 
 4. 全てのデータのクラスタに変更がなくなるまで3の作業を繰り返し、グループ分けを行います。
 ### k-meansの問題点
@@ -327,7 +333,8 @@ https://pythonbunseki.com/python-k-means/
 ```
 - パレート分布
   - パレート分布のスケールは各クラスタ間の平均距離になっています。画像はクラスタ間ユーグリット距離の乱数を生成していますが、実際は最適化する変数ごとに乱数を生成しています。
-<img src="https://github.com/ntaku256/AI/blob/main/Source/Pioneer.png" width="80%">
+
+![](/images/Pioneer.png)
 
 ```python
   #パレート分布
@@ -351,7 +358,8 @@ https://www.ntrand.com/jp/pareto-distribution/
 ### Master
 - 自分が得意な一つのジャンルでいいね数を稼ぐ。自分の作品のジャンルで一番を目指すことを目標として、作品を作成。
 - クラスタ内でいいねを稼いでいるYoutuber(いいね数のルーレット選択)、クラスタ重心、クラスタの移動速度を参考に新作動画を作成。
-<img src="https://github.com/ntaku256/AI/blob/main/Source/Master.png" width="80%">
+
+![](/images/Master.png)
 
 - 自信の評価マップがあるクラスタ内で、ランダムに選択した評価マップを参考に位置を更新する
 ```python
@@ -374,7 +382,8 @@ https://www.ntrand.com/jp/pareto-distribution/
 ```
 ### Faddist
 - 流行を追う人という意味。各世代で熱いジャンルを盛り上げる役割。メントスコーラ+自分の特徴みたいな感じで流行りを自分の作品に組み込む。流行りのクラスタ内でいいねを稼いでいるYoutuber、クラスタ重心、クラスタの移動速度を参考に新作動画を作成。
-<img src="https://github.com/ntaku256/AI/blob/main/Source/Faddist.png" width="80%">
+
+![](/images/Faddist.png)
 
 - ランダムにクラスタを選び、そのクラスタ内でランダムに選択した評価マップを参考に位置を更新する
 ```python

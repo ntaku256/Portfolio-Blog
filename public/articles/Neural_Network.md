@@ -4,12 +4,12 @@
 ### 人工ニューロン
 - ニューロ素子やニューロセルとも呼ぶ。
 ### 神経細胞（ニューロン）
-![](https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/Neurons.png)
+![](/images/Neurons.png)
 ### 訂正！！人口ニューロン　→ 人工ニューロン
 [画像の参考URL](https://hombre-nuevo.com/machinelearning/machinelearning0001/)
 
 # 人工ニューロンの中
-![](https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/Function.png)
+![](/images/Function.png)
 - 入力：X1 ~ Xn
 - 重み(weight)：W1 ~ Wn
 - しきい値：v
@@ -57,29 +57,31 @@ V = 6
 # 伝達関数
 ### ステップ関数(Step Function)
 - 非線形関数で断片的
-<img src="https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/StepFunction.png" width="35%">
-
+![](/images/StepFunction.png)
 ### シグモイド関数(Sigmoid Function)
 - なめらかな関数で連続的
 - バックプロパゲーションにおける学習の計算処理が容易
-<img src="https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/SigmoidFunction.png" width="70%">
+![](/images/SigmoidFunction.png)
 
 ### ステップ関数による論理演算
 - OR
-<img src="https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/OR.png" width="50%">
+
+![](/images/OR.png)
 
 - AND
-<img src="https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/AND.png" width="50%">
+
+![](/images/AND.png)
 
 - そのほかにもNOTやXORなどの論理回路を構成可能
 
 # ニューラルネット
 ### フィードフォワード型ネット(Feed Formard Neteork)または階層型ネットワーク(Layerd Network)
-![](https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/Layered_Network.png)
+![](/images/Layered_Network.png)
 
 ### ネットワークの計算例
 - EOR ( 排他的論理和 )
-<img src="https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/EOR.png" width="80%">
+
+![](/images/EOR.png)
 
 ### ニューラルネットの学習手続き
 ```
@@ -94,14 +96,16 @@ V = 6
 
 # ニューラルネットの種類
 ### 2入力3階層のフィードフォワード型ネットワーク
-<img src="https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/2_3Feedback.png" width="80%">
+
+![](/images/2_3Feedback.png)
 
 - 人口ニューロンや階層を増やせる
 - ネットワークの形式を変えれる
   - 層間の結合は必ずしも全結合させる必要がない
   
 ### リカレントネットワーク ( Recurrent Network )
-<img src="https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/Recurrent.png" width="80%">
+
+![](/images/Recurrent.png)
 
 - ホップフィールドモデルに基づく
 - ネットワークを構成するすべてのニューロンの入力は、自分以外の人口ニューロンの出力となる
@@ -255,7 +259,7 @@ double f(double u)
     // return 1.0 / (1.0 + exp(-u));
 }
 ```
-![](https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/Neuron_C.png)
+![](/images/Neuron_C.png)
 
 ### w2のしきい値を1.5にしたとき
 - AND
@@ -466,7 +470,7 @@ double f(double u)
     // return 1.0 / (1.0 + exp(-u));
 }
 ```
-![](https://github.com/ntaku256/AI/blob/main/C/Neural_Network/Source/nn_c.png)
+![](/images/nn_c.png)
 ### EOR ( 排他的論理和 )
 ```
 C:\Users\TN256\OneDrive\ドキュメント\謝研>cd "c:\Users\TN256\OneDrive\ドキュメント\謝研\AIProgram\" && gcc -fexec-charset=CP932 nn.c -o nn && "c:\Users\TN256\OneDrive\ドキュメント\謝研\AIProgram\"nn
