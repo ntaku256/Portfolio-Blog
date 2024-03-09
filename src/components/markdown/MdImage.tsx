@@ -10,8 +10,18 @@ type MdImageType = {
 const MdImage: FC<MdImageType> = (props) => {
   const { src, alt, title, width } = { ...props };
   const basePath = process.env.PUBLIC_URL || "";
+  let modifiedSrc;
+  if (src && src.startsWith("../..")) {
+    console.log("ok")
+    modifiedSrc = src.replace("../..", "");;  
+  } 
+  else {
+    // もしsrcがundefinedの場合や"../.."から始まらない場合は、元のsrcをそのまま使用する
+    console.log("no")
+    modifiedSrc = src;
+  }
 
-  return <img src={basePath+src} alt={alt} title={title} width={width}/>;
+  return <img src={basePath+modifiedSrc} alt={alt} title={title} width={width}/>;
 };
 
 export default MdImage;
