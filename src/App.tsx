@@ -14,6 +14,7 @@ function App() {
       backgroundImage: `url(${background})` ,
       backgroundAttachment: "fixed",
       objectFit:'cover',
+      minHeight: '100%',
       }}>
         <Header/>
         <RouterComponent/>

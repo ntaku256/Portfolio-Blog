@@ -17,7 +17,7 @@ const Article = () => {
   useEffect(() => {
     const fetchMarkdownContent = async () => {
       try {
-        const response = await fetch(`${basePath}/articles/${postId}.md`);
+        const response = await fetch(`${basePath}/articles/${postId}/README.md`);
         if (!response.ok || response.status !== 200) {
           throw new Error('ファイルが見つかりませんでした。');
         }

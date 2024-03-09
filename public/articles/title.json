@@ -35,7 +35,7 @@
         "date": "2024-03-06"
     },
     {
-        "id": "InstaBae Algorithm",
+        "id": "InstaBaeAlgorithm",
         "title": "InstaBae Algorithm",
         "content": "人間がインスタやYouTubeにおいて、より多くのいいねを獲得しようとする動きから着想を得たインスタバエアルゴリズムの実験を行う。",
         "author": "Nakaya",
@@ -52,6 +52,13 @@
         "id": "Neural_Network",
         "title": "Neural_Network",
         "content": "神経細胞(Neuron)をモデル化した計算素子である人口ニューロン(Artifical Neuron)を組み合わせたもの",
+        "author": "Nakaya",
+        "date": "2024-02-24"
+    },
+    {
+        "id": "MonsterHunterNow",
+        "title": "Monster-Hunter-Now",
+        "content": "Monster-Hunter-Now",
         "author": "Nakaya",
         "date": "2024-02-24"
     }
