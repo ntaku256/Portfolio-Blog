@@ -26,7 +26,7 @@
 | --------------------------------- | ----------------------------- |  |
 
 # 各モンスターの素材報酬
-| <img src="../../articles/MonsterHunterNow/g-jagr/g-jagr.png" width="25%"> | ★1 | ★2 | ★3 | ★4 | ★5 | ★6 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
-| **頭：あたま** 　| | | <img src="../../articles/MonsterHunterNow/g-jagr/3.png" width="60%">  | | <img src="../../articles/MonsterHunterNow/g-jagr/5.png" width="60%"> | |
-| **前脚：まえあし** | | <img src="../../articles/MonsterHunterNow/g-jagr/2.png" width="60%"> | | <img src="../../articles/MonsterHunterNow/g-jagr/4.png" width="60%"> | | <img src="../../articles/MonsterHunterNow/6.png" width="60%"> |
+| <img src="../../articles/MonsterHunterNow/g-jagr/g-jagr.png" width="30%"> | ★2 | ★3 | ★4 | ★5 | ★6 |
+| :----: | :----: | :----: | :----: | :----: | :----: |
+| **頭：あたま** 　| | <img src="../../articles/MonsterHunterNow/g-jagr/3.png" width="80%">  | | <img src="../../articles/MonsterHunterNow/g-jagr/5.png" width="80%"> | |
+| **前脚：まえあし** | <img src="../../articles/MonsterHunterNow/g-jagr/2.png" width="80%"> | | <img src="../../articles/MonsterHunterNow/g-jagr/4.png" width="80%"> | | <img src="../../articles/MonsterHunterNow/6.png" width="80%"> |

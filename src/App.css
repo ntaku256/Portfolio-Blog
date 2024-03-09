@@ -68,3 +68,39 @@ hr {
   text-align: left;
   padding-bottom: 100px;
 }
+
+@media (min-width: 500px) {
+  .article-content {
+    height: 240px;
+  }
+  .article-title {
+    font-size: 24px;
+  }
+  .article-postContent {
+    background-color: rgb(252, 248, 242);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    min-width: 250px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .article-content {
+    height: 100px;
+  }
+  .article-title {
+    font-size: 40px;
+    margin: 10px;
+  }
+  .article-postContent {
+    background-color: rgb(252, 248, 242);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+}

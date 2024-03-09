@@ -49,7 +49,7 @@
         "date": "2024-02-24"
     },
     {
-        "id": "Neural_Network",
+        "id": "NeuralNetwork",
         "title": "Neural_Network",
         "content": "神経細胞(Neuron)をモデル化した計算素子である人口ニューロン(Artifical Neuron)を組み合わせたもの",
         "author": "Nakaya",

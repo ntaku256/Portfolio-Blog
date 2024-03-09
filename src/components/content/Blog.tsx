@@ -47,10 +47,10 @@ const Blog = () => {
       <div style={styles.postGrid}>
         {filteredPosts.map(post => (
             <Link to={`/Article/${post.id}`} key={post.id} style={styles.postContainer}>
-            <div style={styles.postContent}>
-                <h2 style={styles.title}>{post.title}</h2>
+            <div className='article-postContent'>
+                <h2 className='article-title'>{post.title}</h2>
                 <hr />
-                <p style={styles.content}>{post.content}</p>
+                <p className='article-content'>{post.content}</p>
                 <p>更新日: {post.date}</p>
             </div>
             </Link>
@@ -72,21 +72,6 @@ const styles = {
       color: 'inherit',
       marginBottom: 16,
       display: 'block'
-    },
-    postContent: {
-      backgroundColor: 'rgb(252, 248, 242)',
-      border: '1px solid #ccc',
-      borderRadius: 8,
-      padding: 16,
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-      cursor: 'pointer',
-    },
-    title: {
-      color: '#333',
-      marginBottom: 8,
-    },
-    content:{
-      height:'100px',
     }
   };
 
