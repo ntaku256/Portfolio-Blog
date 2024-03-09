@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useParams } from 'react-router-dom';
 import CodeBlock from '../markdown/CodeBlock';
@@ -6,6 +6,12 @@ import MdImage from '../markdown/MdImage';
 import '../markdown/Markdown.css';
 import remarkGfm from 'remark-gfm';
 import 'github-markdown-css/github-markdown-light.css';
+import rehypeRaw from 'rehype-raw'; 
+import remarkBreaks from 'remark-breaks';
+
+import rehypeReact from 'rehype-react';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
 
 const Article = () => {
   const { postId } = useParams<{ postId: string }>();
@@ -46,13 +52,21 @@ const Article = () => {
   return (
     <div className="article">
       <ReactMarkdown
-        remarkPlugins={[remarkGfm]} 
+        remarkPlugins={[
+          remarkGfm,
+          remarkBreaks,
+          remarkRehype,
+          rehypeRaw,
+          rehypeReact,
+          remarkParse
+        ]} 
         className='markdown-body'
         children={markdownContent}
         components={{
           code: CodeBlock,  
           img: MdImage,
-      }}/>
+        }}
+      />
     </div>
   );
 };
