@@ -6,8 +6,7 @@
 import { CodeComponent } from "react-markdown/lib/ast-to-react";
 ```
 ### 参考記事
-**React で markdown を表示する方法(コードハイライト、ファイル名表示、画像サイズ変更まで)**
-
+- **React で markdown を表示する方法(コードハイライト、ファイル名表示、画像サイズ変更まで)**<br>
 https://naoto-kagaya.com/articles/2023-01-24-react-markdown
 
 # 成功
@@ -15,12 +14,11 @@ https://naoto-kagaya.com/articles/2023-01-24-react-markdown
 - ただinline, className, childrenの定義をせず、エラーが出たので少し修正している
 - markdownファイルのパス指定は
 ```tsx
-fetch(`${basePath}/articles/${postId}.md`)
+fetch(`${basePath}/articles/${postId}/README.md`)
 posId : mdファイルの名前
 ```
 ### 参考記事
-**react-markdownのメモ**
-
+- **react-markdownのメモ**<br>
 https://zenn.dev/techexplorer/scraps/4b780b47216f7d
 
 ### CodeBlock.tsx
@@ -79,5 +77,25 @@ Type 'FunctionComponent<CodeBlockProps>' is not assignable to type 'FunctionComp
 - 画像の表示は失敗した参考記事のものを使用している
 - パスの指定は
 ```
-/images/{image_name}
+/images/${postId}/{image_name}
+```
+
+**MdImage.tsx**
+```tsx
+import { FC } from "react";
+
+type MdImageType = {
+  src?: string;
+  alt?: string;
+  title?: string;
+};
+
+const MdImage: FC<MdImageType> = (props) => {
+  const { src, alt, title } = { ...props };
+  const basePath = process.env.PUBLIC_URL || "";
+
+  return <img src={basePath+modifiedSrc} alt={alt} title={title} width={"80%"}/>;
+};
+
+export default MdImage;
 ```

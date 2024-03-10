@@ -12,12 +12,10 @@ const MdImage: FC<MdImageType> = (props) => {
   const basePath = process.env.PUBLIC_URL || "";
   let modifiedSrc;
   if (src && src.startsWith("../..")) {
-    console.log("ok")
     modifiedSrc = src.replace("../..", "");;  
   } 
   else {
     // もしsrcがundefinedの場合や"../.."から始まらない場合は、元のsrcをそのまま使用する
-    console.log("no")
     modifiedSrc = src;
   }
 

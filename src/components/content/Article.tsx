@@ -6,12 +6,12 @@ import MdImage from '../markdown/MdImage';
 import '../markdown/Markdown.css';
 import remarkGfm from 'remark-gfm';
 import 'github-markdown-css/github-markdown-light.css';
-import rehypeRaw from 'rehype-raw'; 
 import remarkBreaks from 'remark-breaks';
-
-import rehypeReact from 'rehype-react';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
+import rehypeRaw from 'rehype-raw'; 
+import rehypeStringify from 'rehype-stringify';
+import rehypeReact from 'rehype-react';
 
 const Article = () => {
   const { postId } = useParams<{ postId: string }>();
@@ -55,10 +55,11 @@ const Article = () => {
         remarkPlugins={[
           remarkGfm,
           remarkBreaks,
+          remarkParse,
           remarkRehype,
           rehypeRaw,
+          rehypeStringify,
           rehypeReact,
-          remarkParse
         ]} 
         className='markdown-body'
         children={markdownContent}

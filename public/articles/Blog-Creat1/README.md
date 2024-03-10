@@ -16,8 +16,7 @@ npm start
 - gh-pages でデプロイしようとした
 
 ### 参考記事
-**今日のHello World「React と GitHub Pagesを使って、静的ページを立ち上げるまで。」**
-
+- **今日のHello World「React と GitHub Pagesを使って、静的ページを立ち上げるまで。」**<br>
 https://nikeeshipro.hatenablog.com/entry/2019/03/21/212156
 
 ```
@@ -27,9 +26,10 @@ npm run deploy
 - がなかなか上手くいかず、いろいろな記事を見た結果、Github Actionsを使ってデプロイした方が簡単そうだった。
 
 # Github Actionsを使ったデプロイ
-### 参考記事
-**GitHub ActionsでReactアプリをGitHub Pagesにデプロイする**
+- 今回はこの方法を使った。
 
+### 参考記事
+- **GitHub ActionsでReactアプリをGitHub Pagesにデプロイする**<br>
 https://zenn.dev/acha_n/articles/deploy-react-app-with-github-actions
 
 ### ワークフローを作成

@@ -35,6 +35,13 @@
         "date": "2024-03-06"
     },
     {
+        "id": "Blog-Creat5",
+        "title": "ブログ作成その5",
+        "content": "Markdownで<img>タグを使えるようにしよう",
+        "author": "Nakaya",
+        "date": "2024-03-10"
+    },
+    {
         "id": "InstaBaeAlgorithm",
         "title": "InstaBae Algorithm",
         "content": "人間がインスタやYouTubeにおいて、より多くのいいねを獲得しようとする動きから着想を得たインスタバエアルゴリズムの実験を行う。",

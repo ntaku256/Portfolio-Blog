@@ -17,8 +17,7 @@ react-dom.production.min.js:189 Error
 - BrowserRouterで囲う場所を変えた。
 - どうやら、同じ現象が起きている人がたくさんいるみたいで安心した。
 ### 参考動画
-**useLocation() may be used only in the context of a Router component**
-
+- **useLocation() may be used only in the context of a Router component**<br>
 https://www.youtube.com/watch?v=pU1r-Hc8_gM
 
 # 修正前
