@@ -1,6 +1,6 @@
 # 起こったこと
-- React Routerのところで合っているはずなのに、エラーを吐いた
-```
+- `React Router`のところで合っているはずなのに、エラーを吐いた
+```tsx
 react-dom.production.min.js:189 Error
     at s (history.ts:494:11)
     at O (hooks.tsx:104:3)
@@ -14,7 +14,7 @@ react-dom.production.min.js:189 Error
     at os (react-dom.production.min.js:268:429)
 ```
 # 修正案
-- BrowserRouterで囲う場所を変えた。
+- `BrowserRouter`で囲う場所を変えた。
 - どうやら、同じ現象が起きている人がたくさんいるみたいで安心した。
 ### 参考動画
 - **useLocation() may be used only in the context of a Router component**<br>

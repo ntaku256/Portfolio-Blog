@@ -1,6 +1,6 @@
 # Markdown形式で記事を表示しよう
 # 失敗
-- CodeComponentのimportが上手くいかず、たくさんの記事を見たが解決方法が分からなかった。
+- `CodeComponent`のimportが上手くいかず、たくさんの記事を見たが解決方法が分からなかった。
 - のでCodeComponentを使わない方法を模索した。
 ```tsx
 import { CodeComponent } from "react-markdown/lib/ast-to-react";
@@ -10,8 +10,8 @@ import { CodeComponent } from "react-markdown/lib/ast-to-react";
 https://naoto-kagaya.com/articles/2023-01-24-react-markdown
 
 # 成功
-- 参考記事を参考にすることでmarkdown形式で表示できた。
-- ただinline, className, childrenの定義をせず、エラーが出たので少し修正している
+- 参考記事を参考にすることで`markdown形式`で表示できた。
+- ただ`inline, className, children`の定義をせず、エラーが出たので少し修正している
 - markdownファイルのパス指定は
 ```tsx
 fetch(`${basePath}/articles/${postId}/README.md`)
@@ -65,7 +65,7 @@ export default CodeBlock;
     img: MdImage,
 }}/>
 ```
-### 注意点
+### 注意点(`解決済み 2024/3/18`)
 - 動作はするが、次のようなエラーが出てしまった。解決方法が分からず動作しているので現状放置している
 ```shell
 Type 'FC<CodeBlockProps>' is not assignable to type 'keyof IntrinsicElements | Component<ClassAttributes<HTMLElement> & HTMLAttributes<HTMLElement> & ExtraProps> | undefined'.

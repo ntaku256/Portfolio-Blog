@@ -4,26 +4,26 @@
 ```
 npx create-react-app {プロジェクト名}
 ```
-```
+```shell
 cd {プロジェクト名}
 npm start
 ```
-でURLがhttp://localhost:3000/　のプロジェクトが実行される
+でURLがhttp://localhost:3000/ のプロジェクトが実行される
 
 3. ローカルのプロジェクトをGithubと連携する
 
 # 初めにしようとしたこと(失敗)
-- gh-pages でデプロイしようとした
+- `gh-pages` でデプロイしようとした
 
 ### 参考記事
 - **今日のHello World「React と GitHub Pagesを使って、静的ページを立ち上げるまで。」**<br>
 https://nikeeshipro.hatenablog.com/entry/2019/03/21/212156
 
-```
+```shell
 npm run deploy
 ```
-- でリポジトリにgh-pagesというブランチを作り、そこに静的ページがデプロイされる。
-- がなかなか上手くいかず、いろいろな記事を見た結果、Github Actionsを使ってデプロイした方が簡単そうだった。
+- でリポジトリに`gh-pages`というブランチを作り、そこに静的ページがデプロイされる。
+- がなかなか上手くいかず、いろいろな記事を見た結果、`Github Actions`を使ってデプロイした方が簡単そうだった。
 
 # Github Actionsを使ったデプロイ
 - 今回はこの方法を使った。
@@ -37,7 +37,7 @@ https://zenn.dev/acha_n/articles/deploy-react-app-with-github-actions
 
 ![](/images/GithubActions.png)
 
-次にワークフローを作成します。プロジェクトのルートに「.github」というディレクトリを作成し、その中に「workflows」というディレクトリを作成します。次に「workflows」の中に .yml ファイルを作成します。.yml ファイルの名前は何でも OK です。
+次にワークフローを作成します。プロジェクトのルートに`.github`というディレクトリを作成し、その中に`workflows`というディレクトリを作成します。次に「workflows」の中に .ymlファイルを作成します。`.yml` ファイルの名前は何でも OK です。
 ### deploy-gh-pages.yml
 ```yml
 name: Deploy GitHub Pages #workflow-name
@@ -99,7 +99,7 @@ jobs:
 ### ワークフローの実行
 ワークフローが完成したら commit して push します。その後デフォルトブランチに merge すると、自動的にワークフローが実行されます。
 
-「Actions」タブの「All workflows」下に実行中および実行済みのワークフローが一覧で表示されます。成功すると緑色のチェックマークが付きます。
+「Actions」タブの`All workflows`下に実行中および実行済みのワークフローが一覧で表示されます。成功すると緑色のチェックマークが付きます。
 
 ### 注意点
 - 開発を進めていくとwarningがたくさん出てエラーが起きたので無視するようにした。

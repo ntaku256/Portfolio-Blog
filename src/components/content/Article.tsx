@@ -1,9 +1,6 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useParams } from 'react-router-dom';
-import CodeBlock from '../markdown/CodeBlock';
-import MdImage from '../markdown/MdImage';
-import '../markdown/Markdown.css';
 import remarkGfm from 'remark-gfm';
 import 'github-markdown-css/github-markdown-light.css';
 import remarkBreaks from 'remark-breaks';
@@ -12,6 +9,8 @@ import remarkRehype from 'remark-rehype';
 import rehypeRaw from 'rehype-raw'; 
 import rehypeStringify from 'rehype-stringify';
 import rehypeReact from 'rehype-react';
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { okaidia } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 const Article = () => {
   const { postId } = useParams<{ postId: string }>();
@@ -39,7 +38,7 @@ const Article = () => {
     };
 
     fetchMarkdownContent();
-  }, [postId]);
+  });
 
   if (loading) {
     return <div>Loading...</div>;
@@ -64,8 +63,41 @@ const Article = () => {
         className='markdown-body'
         children={markdownContent}
         components={{
-          code: CodeBlock,  
-          img: MdImage,
+          code(props) {
+            const {children, className, node, ...rest} = props      
+            const match = /language-(\w+)/.exec(className || '')
+            const lang = match && match[1] ? match[1] : "";
+            return match ? (
+              <SyntaxHighlighter
+                customStyle={{ 
+                  background: undefined,
+                  fontSize: "16px",
+                }}
+                style={okaidia}
+                showLineNumbers={true}
+                language={lang}
+                children={String(children).replace(/\n$/, "")}
+              />
+            ) : (
+              <code {...rest} className={className}>
+                {children}
+              </code>
+            )
+          },
+          img(props){
+            const { src, alt, title, width } = { ...props };
+            const basePath = process.env.PUBLIC_URL || "";
+            let modifiedSrc;
+            if (src && src.startsWith("../..")) {
+              modifiedSrc = src.replace("../..", "");;  
+            } 
+            else {
+              // もしsrcがundefinedの場合や"../.."から始まらない場合は、元のsrcをそのまま使用する
+              modifiedSrc = src;
+            }
+
+            return <img src={basePath+modifiedSrc} alt={alt} title={title} width={width}/>;
+          }
         }}
       />
     </div>

@@ -2,10 +2,10 @@
 - プログラムからパスを指定するときは絶対パスである必要がある
 - ローカルではhttp://localhost:3000/ で、basepathが"/"である
 - それに対してリモートではhttps://ntaku256.github.io/Portfolio-Blog/ でbasepathが"/Portfolio-Blog/"になる
-- なのでローカルとリモートでbasepathをそれぞれ指定する必要がある
+- なのでローカルとリモートで`basepath`をそれぞれ指定する必要がある
 
 # basepathを指定する
-- 以下のプログラムを追加することでbasepathを指定する
+- 以下のプログラムを追加することで`basepath`を指定する
 - App.tsx
 ```tsx
 import React from 'react';
@@ -32,4 +32,4 @@ export default App;
 const basePath = process.env.PUBLIC_URL || "/";
 <BrowserRouter basename={basePath}>
 ```
-- これで変数であるbasepathにローカルとリモートで異なるパスを指定する
+- これで変数である`basepath`にローカルとリモートで異なるパスを指定する

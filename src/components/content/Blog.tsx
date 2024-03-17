@@ -24,7 +24,7 @@ const Blog = () => {
       }
     };
     fetchData();
-  },[]);
+  });
   
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);

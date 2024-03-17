@@ -1,7 +1,7 @@
 # Markdownで<**img**>タグを使いたい
 ### したかったこと
-- 各画像の大きさをしてできるようにしたくて、<**img**>タグを使う必要がある
-- <**br**>で改行できるようにしたい
+- 各画像の大きさをしてできるようにしたくて、`<img>`タグを使う必要がある
+- `<br>`で改行できるようにしたい
 
 ### 参考記事
 - **Next.js製ブログでunifiedを使ってMarkdownを変換する**<br>
@@ -15,43 +15,43 @@ https://magazine.techacademy.jp/magazine/29974
 
 # したこと
 - プラグインでHTMLを使えるようにする
-- ただこれだけだと、画像のサイズを指定できないので、**MdImage.tsx**を修正する
+- ただこれだけだと、画像のサイズを指定できないので、`MdImage.tsx`を修正する
 - また、imgタグのパスの問題で、markdownを直接見た時画像が表示されないので、修正する(実行環境のパスにしているため)
 
 ### 使用したプラグイン
-- **remark-gfm**
+- `remark-gfm`
     - GithubのReadme形式でMarkodownを書けるプラグイン 
     - 前回(**ブログ作成その4**)で既に使用している 
     - **mdast**に対してプラグインの処理を行う
 <br>
 
-- **remark-breaks**
+- `remark-breaks`
     - 改行をbrにするプラグイン
     - **mdast**に対してプラグインの処理を行う
 <br>
 
-- **rehype-raw**
+- `rehype-raw`
     - **Markdown**の中で**HTML**を使えるようにするプラグイン
     - **hast**に対してプラグインの処理を行う
 <br>
 
-- **remark-parse**
+- `remark-parse`
     - **markdown**を**mdast**(Markdownの抽象構文木)に変換するプラグイン
 <br>
 
-- **remark-rehype**
+- `remark-rehype`
     - **mdast**を**hast**(HTMLの抽象構文木)に変換するプラグイン
 <br>
 
-- **rehype-stringify**
+- `rehype-stringify`
     - **hast**を**HTML**に変換するプラグイン
 <br>
 
-- **rehype-react**
+- `rehype-react`
     - **HTML**から**React**へ変換するプラグイン
 
 ### 注意点
-- **rehype-raw**は**hast**に対してプラグインの処理を行うので、remarkPluginsで書くときに気を付ける必要がある
+- **rehype-raw**は**hast**に対してプラグインの処理を行うので、`remarkPlugins`で書くときに気を付ける必要がある
 - あとは変換の順番を気にしながらコーディングする
 
 **Article.tsx**

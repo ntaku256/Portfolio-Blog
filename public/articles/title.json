@@ -42,6 +42,13 @@
         "date": "2024-03-10"
     },
     {
+        "id": "Blog-Creat6",
+        "title": "ブログ作成その6",
+        "content": "現状起こっているエラーをなくそう",
+        "author": "Nakaya",
+        "date": "2024-03-17"
+    },
+    {
         "id": "InstaBaeAlgorithm",
         "title": "InstaBae Algorithm",
         "content": "人間がインスタやYouTubeにおいて、より多くのいいねを獲得しようとする動きから着想を得たインスタバエアルゴリズムの実験を行う。",
@@ -67,6 +74,6 @@
         "title": "Monster-Hunter-Now",
         "content": "Monster-Hunter-Now",
         "author": "Nakaya",
-        "date": "2024-02-24"
+        "date": "2024-03-10"
     }
 ]
