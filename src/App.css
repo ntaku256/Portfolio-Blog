@@ -78,7 +78,8 @@ hr {
   border: 2px solid #ccc;
   background-color:rgb(78, 78, 78) ;
   color: rgba(252, 144, 2, 0.89);
-  font-size: 18px;
+  font-size: 16px;
+  margin: 4px;
 }
 
 .markdown-body {
@@ -87,10 +88,14 @@ hr {
 }
 
 .markdown-body pre{
-  padding: 8px!important;
+  padding: 0px!important;
   background-color: #0d1117 !important;
 }
 
+.markdown-body pre:has(.precode){
+  padding: 16px!important;
+  background-color: #0d1117 !important;
+}
 
 
 .markdown-body pre div div{

@@ -36,7 +36,7 @@ jobs:
         run: npm ci && npm run build
         env:
           PUBLIC_URL: /Portfolio-Blog #repository-name
-          CI: false #warning -> error
+          CI: true #warning -> error
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:

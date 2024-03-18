@@ -10,7 +10,7 @@ babel-preset-react-app is part of the create-react-app project, which is not mai
 Add "@babel/plugin-proposal-private-property-in-object" to your devDependencies to work around this error. This will make this message go away.
 ```
 ### 修正
-- `babel-preset-react-app`は開発ビルド時のみ使用するので`package.json`のdependencyではなく、devDependencyにインストールする
+- `babel-preset-react-app`は開発ビルド時のみ使用するので`package.json`の`dependency`ではなく、`devDependency`にインストールする
 ```shell
 npm install @babel/plugin-proposal-private-property-in-object --save-dev
 ```

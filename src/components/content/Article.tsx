@@ -11,6 +11,7 @@ import rehypeStringify from 'rehype-stringify';
 import rehypeReact from 'rehype-react';
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import '../../App.css'
 
 const Article = () => {
   const { postId } = useParams<{ postId: string }>();
@@ -88,7 +89,7 @@ const Article = () => {
               );
             } else {
               return (
-                <code {...rest} className={className}>
+                <code {...rest} className={"precode"}>
                   {children}
                 </code>
               );
