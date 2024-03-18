@@ -35,7 +35,7 @@ https://zenn.dev/acha_n/articles/deploy-react-app-with-github-actions
 ### ワークフローを作成
 まずは GitHub のリポジトリを選択し、「Settings」タブ >「Pages」>「Build and deployment」下の「Source」で「GitHub Actions」を選択します。
 
-![](/images/GithubActions.png)
+<img src="../../articles/Blog-Creat1/GithubActions.png" width="80%">
 
 次にワークフローを作成します。プロジェクトのルートに`.github`というディレクトリを作成し、その中に`workflows`というディレクトリを作成します。次に「workflows」の中に .ymlファイルを作成します。`.yml` ファイルの名前は何でも OK です。
 ### deploy-gh-pages.yml

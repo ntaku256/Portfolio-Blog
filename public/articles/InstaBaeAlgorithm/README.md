@@ -6,7 +6,7 @@
 - 群知能の一種で、生物の群れを粒子として模倣している
 - 昆虫の群れなどにおいては，適当な経路を発見した一匹に残りの群れが素早く追従することができるが，これを多次元空間において位置と速度を持つ粒子群でモデル化したもの
 
-![](/images/PSO.png)
+<img src="../../articles/InstaBaeAlgorithm/PSO.png" width="80%">
 
 https://qiita.com/opticont/items/04a5b4ff41483966987f
 
@@ -16,12 +16,12 @@ https://qiita.com/opticont/items/04a5b4ff41483966987f
 - 裏返したマスの価値の総和が最大となる手を選択してゆく。
 - アルゴリズムでは、この価値マップをオセロで多くの駒をとれるように何度も試行錯誤して値を変えていく。
 
-![](/images/StoneMap.png)
+<img src="../../articles/InstaBaeAlgorithm/StoneMap.png" width="60%">
 
 ### スコアの計算
 - 左の図の例では、右の図のような場所を選択[7][1]するとvalueが (-3) + (-1) + (-1) = -5 になる。
 
-![](/images/OseroMap.png)
+<img src="../../articles/InstaBaeAlgorithm/OseroMap.png" width="90%">
 
 ```
 置ける場所とvalue
@@ -258,19 +258,19 @@ speeds[2] =
 - 非階層的クラスタリング ・・・ 母集団の中で近いデータをまとめる
 - 入力データ
 
-![](/images/kmean1.png)
+<img src="../../articles/InstaBaeAlgorithm/kmean1.png" width="60%">
 
 1. まず、k個のクラスタの代表点（中心）を決める
 
-![](/images/kmean2.png)
+<img src="../../articles/InstaBaeAlgorithm/kmean2.png" width="60%">
 
 2. 次に、全てのデータを、もっとも中心が近いクラスタに振り分ける
 
-![](/images/kmean3.png)
+<img src="../../articles/InstaBaeAlgorithm/kmean3.png" width="60%">
 
 3. クラスタがまとまったら、再度、各クラスタの重心点（平均値）を計算しし直す。重心点を変えることでデータが分類されるクラスタも変わる。
 
-![](/images/kmean4.png)
+<img src="../../articles/InstaBaeAlgorithm/kmean4.png" width="60%">
 
 4. 全てのデータのクラスタに変更がなくなるまで3の作業を繰り返し、グループ分けを行います。
 ### k-meansの問題点
@@ -334,7 +334,7 @@ https://pythonbunseki.com/python-k-means/
 - パレート分布
   - パレート分布のスケールは各クラスタ間の平均距離になっています。画像はクラスタ間ユーグリット距離の乱数を生成していますが、実際は最適化する変数ごとに乱数を生成しています。
 
-![](/images/Pioneer.png)
+<img src="../../articles/InstaBaeAlgorithm/Pioneer.png" width="80%">
 
 ```python
   #パレート分布

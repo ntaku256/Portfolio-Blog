@@ -76,9 +76,9 @@ hr {
 
 .markdown-body li code, .markdown-body p code, .markdown-body h3 code {
   border: 2px solid #ccc;
-  background-color:rgb(70, 70, 70) ;
-  color: rgba(252, 114, 2, 0.89);
-  font-size: 20px;
+  background-color:rgb(78, 78, 78) ;
+  color: rgba(252, 144, 2, 0.89);
+  font-size: 18px;
 }
 
 .markdown-body {
