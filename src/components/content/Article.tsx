@@ -64,25 +64,35 @@ const Article = () => {
         children={markdownContent}
         components={{
           code(props) {
-            const {children, className, node, ...rest} = props      
-            const match = /language-(\w+)/.exec(className || '')
+            const { children, className, node, ...rest} = props 
+            const match = /language-(\w+)/.exec(className || '');
+            const matchname = /language-(\w+)(:.+)/.exec(className || '');
             const lang = match && match[1] ? match[1] : "";
-            return match ? (
-              <SyntaxHighlighter
-                customStyle={{ 
-                  background: undefined,
-                  fontSize: "16px",
-                }}
-                style={okaidia}
-                showLineNumbers={true}
-                language={lang}
-                children={String(children).replace(/\n$/, "")}
-              />
-            ) : (
-              <code {...rest} className={className}>
-                {children}
-              </code>
-            )
+            const name = matchname && matchname[2] ? matchname[2].slice(1) : '';
+            console.log(lang)
+            if (lang) {
+              return (
+                <div>
+                  <div>{name}</div>
+                  <SyntaxHighlighter
+                    customStyle={{ 
+                      background: undefined,
+                      fontSize: "16px",
+                    }}
+                    style={okaidia}
+                    showLineNumbers={true}
+                    language={lang}
+                    children={String(children).replace(/\n$/, "")}
+                  />
+                </div>
+              );
+            } else {
+              return (
+                <code {...rest} className={className}>
+                  {children}
+                </code>
+              );
+            }
           },
           img(props){
             const { src, alt, title, width } = { ...props };

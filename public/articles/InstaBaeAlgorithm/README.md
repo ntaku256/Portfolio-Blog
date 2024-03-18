@@ -23,7 +23,7 @@ https://qiita.com/opticont/items/04a5b4ff41483966987f
 
 <img src="../../articles/InstaBaeAlgorithm/OseroMap.png" width="90%">
 
-```
+```python
 置ける場所とvalue
   [2][5].value = -1
   [4][5].value = -1
@@ -56,7 +56,7 @@ https://www.info.kindai.ac.jp/~takasi-i/thesis/2012_09-1-037-0133_S_Shiota_thesi
     return np.random.uniform(-30,30,(8*8))
 ```
 - 評価マップ
-```
+```python
 vector =
 [  24.50813671  -29.2878167     9.04794791  -20.67778499    9.04018821   -2.40647408   -8.3115887    27.01061412
    -5.23585605  -10.35255287  -22.7822244    16.51181067  -15.84991705    6.78862383  -21.22315287   -7.65030773
@@ -89,7 +89,7 @@ vector =
                   self.g_best_score = new_score
                   self.g_best_vector = np.copy(self.vectors[i])
 ```
-```
+```python
   スコア : (オセロの結果=自分の色があるマス+開いているマス)
   p_best_score[12] = 40 : 12番目の評価マップ(vector)内の自己ベストが40 
   g_best_score = 50 : 全評価マップ(vector)の中でベストスコアが50
@@ -123,7 +123,7 @@ vector =
               self.vectors[i] = self.vectors[i] + self.speeds[i]
 ```
 - 点(vector)の移動速度(speeds)
-```
+```python
 speeds[2] =
 [-2.34390529e+01 -3.22353587e+01 -3.22654493e-01  3.61578725e+01
   -7.38940442e+00  2.06039252e+01 -1.60904841e+01 -1.93745703e+01
@@ -289,7 +289,7 @@ https://exawizards.com/column/article/ai/clustering/
 https://pythonbunseki.com/python-k-means/
 
 - 外部モジュール,その他
-```
+```python
   #平均を求める
   np.mean()
 
@@ -359,7 +359,7 @@ https://www.ntrand.com/jp/pareto-distribution/
 - 自分が得意な一つのジャンルでいいね数を稼ぐ。自分の作品のジャンルで一番を目指すことを目標として、作品を作成。
 - クラスタ内でいいねを稼いでいるYoutuber(いいね数のルーレット選択)、クラスタ重心、クラスタの移動速度を参考に新作動画を作成。
 
-![](/images/Master.png)
+<img src="../../articles/InstaBaeAlgorithm/Master.png" width="90%">
 
 - 自信の評価マップがあるクラスタ内で、ランダムに選択した評価マップを参考に位置を更新する
 ```python
@@ -383,7 +383,7 @@ https://www.ntrand.com/jp/pareto-distribution/
 ### Faddist
 - 流行を追う人という意味。各世代で熱いジャンルを盛り上げる役割。メントスコーラ+自分の特徴みたいな感じで流行りを自分の作品に組み込む。流行りのクラスタ内でいいねを稼いでいるYoutuber、クラスタ重心、クラスタの移動速度を参考に新作動画を作成。
 
-![](/images/Faddist.png)
+<img src="../../articles/InstaBaeAlgorithm/Faddist.png" width="90%">
 
 - ランダムにクラスタを選び、そのクラスタ内でランダムに選択した評価マップを参考に位置を更新する
 ```python

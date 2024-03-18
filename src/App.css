@@ -82,12 +82,28 @@ hr {
 }
 
 .markdown-body {
-  padding: 10px;
+  padding: 6px;
   background-color: rgb(252, 248, 242) !important;
 }
 
-.markdown-body pre {
+.markdown-body pre{
+  padding: 8px!important;
   background-color: #0d1117 !important;
+}
+
+
+
+.markdown-body pre div div{
+  color: white;
+  font-size: 30px;
+  padding: 0px 10px;
+  background-color: #303030;
+}
+
+.markdown-body pre div pre{
+  background-color: #0d1117 !important;
+  padding: 6px!important;
+  margin: 0px!important;
 }
 
 .markdown-body h1{

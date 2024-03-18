@@ -6,8 +6,7 @@
 
 # basepathを指定する
 - 以下のプログラムを追加することで`basepath`を指定する
-- App.tsx
-```tsx
+```tsx:App.tsx
 import React from 'react';
 import './App.css';
 import RouterComponent from './components/content/Router';

@@ -1,6 +1,6 @@
 # 起こったこと
 - `React Router`のところで合っているはずなのに、エラーを吐いた
-```js
+```shell
 react-dom.production.min.js:189 Error
     at s (history.ts:494:11)
     at O (hooks.tsx:104:3)
@@ -21,8 +21,7 @@ react-dom.production.min.js:189 Error
 https://www.youtube.com/watch?v=pU1r-Hc8_gM
 
 # 修正前
-- Router.tsx
-```tsx
+```tsx:Router.tsx
 <BrowserRouter>
     <Routes>
         <Route path='/' element={<Blog/>}/>
@@ -32,15 +31,13 @@ https://www.youtube.com/watch?v=pU1r-Hc8_gM
 ```
 
 # 修正後
-### Router.tsx
-```tsx
+```tsx:Router.tsx
 <Routes>
     <Route path='/' element={<Blog/>}/>
     <Route path='/Article/:postId' element={<Article />}/>
 </Routes>
 ```
-### App.tsx
-```tsx
+```tsx:App.tsx
 <BrowserRouter basename={basePath}>
     <div className="App">
     <RouterComponent/>

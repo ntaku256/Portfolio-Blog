@@ -3,9 +3,11 @@
 #  babel-preset-react-app
 ### エラー症状
 ```shell
-One of your dependencies, babel-preset-react-app, is importing the "@babel/plugin-proposal-private-property-in-object" package without declaring it in its dependencies. This is currently working because "@babel/plugin-proposal-private-property-in-object" is already in your node_modules folder for unrelated reasons, but it may break at any time.
+One of your dependencies, babel-preset-react-app, is importing the "@babel/plugin-proposal-private-property-in-object" package without declaring it in its dependencies. 
+This is currently working because "@babel/plugin-proposal-private-property-in-object" is already in your node_modules folder for unrelated reasons, but it may break at any time.
 
-babel-preset-react-app is part of the create-react-app project, which is not maintianed anymore. It is thus unlikely that this bug will ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to your devDependencies to work around this error. This will make this message go away.
+babel-preset-react-app is part of the create-react-app project, which is not maintianed anymore. It is thus unlikely that this bug will ever be fixed. 
+Add "@babel/plugin-proposal-private-property-in-object" to your devDependencies to work around this error. This will make this message go away.
 ```
 ### 修正
 - `babel-preset-react-app`は開発ビルド時のみ使用するので`package.json`のdependencyではなく、devDependencyにインストールする
@@ -22,12 +24,12 @@ https://stackoverflow.com/questions/76719218/created-new-react-app-and-message-a
 ```shell
 WARNING in ./node_modules/hast-util-raw/node_modules/parse5/dist/common/doctype.js
 Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
-Failed to parse source map from 'C:\Users\TN256\Documents\portfolio\portfolio\node_modules\hast-util-raw\node_modules\parse5\dist\common\doctype.js.map' file: Error: ENOENT: no such file or directory, open 'C:\Users\TN256\Documents\portfolio\portfolio\node_modules\hast-util-raw\node_modules\parse5\dist\common\doctype.js.map'
+Failed to parse source map from 'C:\Users\TN256\Documents\portfolio\portfolio\node_modules\hast-util-raw\node_modules\parse5\dist\common\doctype.js.map' file: Error: ENOENT: no such file or directory, 
+open 'C:\Users\TN256\Documents\portfolio\portfolio\node_modules\hast-util-raw\node_modules\parse5\dist\common\doctype.js.map'
 ```
 ### 修正
 - `env`ファイルを追加する
-**.env**
-```tsx
+```tsx:.env
 GENERATE_SOURCEMAP=false
 ```
 ### 参考URL
@@ -43,8 +45,7 @@ Type 'FunctionComponent<CodeBlockProps>' is not assignable to type 'FunctionComp
       Type 'number' is not assignable to type 'string | Element | null | undefined'.
 ```
 ### 修正前
-### Article.tsx
-```tsx
+```tsx:Article.tsx
 <ReactMarkdown
   remarkPlugins={[remarkGfm]} 
   className='markdown-body'
@@ -56,7 +57,7 @@ Type 'FunctionComponent<CodeBlockProps>' is not assignable to type 'FunctionComp
 ```
 ### 修正後
 - 型の指定がよくわからなかったので、別のファイルに書くのをやめた
-```tsx
+```tsx:Article.tsx
 <ReactMarkdown
     remarkPlugins={[
         remarkGfm,

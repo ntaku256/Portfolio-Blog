@@ -54,8 +54,7 @@ https://magazine.techacademy.jp/magazine/29974
 - **rehype-raw**は**hast**に対してプラグインの処理を行うので、`remarkPlugins`で書くときに気を付ける必要がある
 - あとは変換の順番を気にしながらコーディングする
 
-**Article.tsx**
-```tsx
+```tsx:Article.tsx
 import remarkParse from 'remark-parse';
 import remarkBreaks from 'remark-breaks';
 import remarkRehype from 'remark-rehype';
@@ -82,9 +81,7 @@ import rehypeReact from 'rehype-react';
     }}
 />
 ```
-
-**MdImage.tsx**
-```tsx
+```tsx:MdImage.tsx
 import { FC } from "react";
 
 type MdImageType = {

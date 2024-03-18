@@ -4,12 +4,14 @@
 ### 人工ニューロン
 - ニューロ素子やニューロセルとも呼ぶ。
 ### 神経細胞（ニューロン）
-![](/images/Neurons.png)
+<img src="../../articles/NeuralNetwork/Neurons.png" width="100%">
+
 ### 訂正！！人口ニューロン　→ 人工ニューロン
 [画像の参考URL](https://hombre-nuevo.com/machinelearning/machinelearning0001/)
 
 # 人工ニューロンの中
-![](/images/Function.png)
+<img src="../../articles/NeuralNetwork/Function.png" width="100%">
+
 - 入力：X1 ~ Xn
 - 重み(weight)：W1 ~ Wn
 - しきい値：v
@@ -57,31 +59,35 @@ V = 6
 # 伝達関数
 ### ステップ関数(Step Function)
 - 非線形関数で断片的
-![](/images/StepFunction.png)
+
+<img src="../../articles/NeuralNetwork/StepFunction.png" width="40%">
+
 ### シグモイド関数(Sigmoid Function)
 - なめらかな関数で連続的
 - バックプロパゲーションにおける学習の計算処理が容易
-![](/images/SigmoidFunction.png)
+
+<img src="../../articles/NeuralNetwork/SigmoidFunction.png" width="80%">
 
 ### ステップ関数による論理演算
 - OR
 
-![](/images/OR.png)
+<img src="../../articles/NeuralNetwork/OR.png" width="80%">
 
 - AND
 
-![](/images/AND.png)
+<img src="../../articles/NeuralNetwork/AND.png" width="80%">
 
 - そのほかにもNOTやXORなどの論理回路を構成可能
 
 # ニューラルネット
 ### フィードフォワード型ネット(Feed Formard Neteork)または階層型ネットワーク(Layerd Network)
-![](/images/Layered_Network.png)
+
+<img src="../../articles/NeuralNetwork/Layered_Network.png" width="80%">
 
 ### ネットワークの計算例
 - EOR ( 排他的論理和 )
 
-![](/images/EOR.png)
+<img src="../../articles/NeuralNetwork/EOR.png" width="80%">
 
 ### ニューラルネットの学習手続き
 ```
@@ -97,7 +103,7 @@ V = 6
 # ニューラルネットの種類
 ### 2入力3階層のフィードフォワード型ネットワーク
 
-![](/images/2_3Feedback.png)
+<img src="../../articles/NeuralNetwork/2_3Feedback.png" width="80%">
 
 - 人口ニューロンや階層を増やせる
 - ネットワークの形式を変えれる
@@ -105,13 +111,13 @@ V = 6
   
 ### リカレントネットワーク ( Recurrent Network )
 
-![](/images/Recurrent.png)
+<img src="../../articles/NeuralNetwork/Recurrent.png" width="80%">
 
 - ホップフィールドモデルに基づく
 - ネットワークを構成するすべてのニューロンの入力は、自分以外の人口ニューロンの出力となる
 
 # サンプルプログラム
-```C
+```c
 /******************************************************/
 /*          neuron.c                                  */
 /*  単体の人工ニューロンの計算　　                       */
@@ -259,11 +265,12 @@ double f(double u)
     // return 1.0 / (1.0 + exp(-u));
 }
 ```
-![](/images/Neuron_C.png)
+
+<img src="../../articles/NeuralNetwork/Neuron_C.png" width="80%">
 
 ### w2のしきい値を1.5にしたとき
 - AND
-```
+```shell
 c:\Users\TN256\OneDrive\ドキュメント\謝研\AIProgram>cd "c:\Users\TN256\OneDrive\ドキュメント\謝研\AIProgram\" && gcc -fexec-charset=CP932 neuron.c -o neuron && "c:\Users\TN256\OneDrive\ドキュメント\謝研\AIProgram\"neuron
 data24.txt
 データの個数:4
@@ -274,7 +281,7 @@ data24.txt
 ```
 ### w2のしきい値を0.5にしたとき
 - OR
-```
+```shell
 C:\Users\TN256\OneDrive\ドキュメント\謝研>cd "c:\Users\TN256\OneDrive\ドキュメント\謝研\AIProgram\" && gcc -fexec-charset=CP932 neuron.c -o neuron && "c:\Users\TN256\OneDrive\ドキュメント\謝研\AIProgram\"neuron
 data24.txt
 データの個数:4
@@ -285,7 +292,7 @@ data24.txt
 ```
 
 
-```C
+```c
 /********************************************/
 /*                  nn.c                    */
 /*  単純な階層型ニューラルワークの計算         */
@@ -470,9 +477,11 @@ double f(double u)
     // return 1.0 / (1.0 + exp(-u));
 }
 ```
-![](/images/nn_c.png)
+
+<img src="../../articles/NeuralNetwork/nn_c.png" width="80%">
+
 ### EOR ( 排他的論理和 )
-```
+```shell
 C:\Users\TN256\OneDrive\ドキュメント\謝研>cd "c:\Users\TN256\OneDrive\ドキュメント\謝研\AIProgram\" && gcc -fexec-charset=CP932 nn.c -o nn && "c:\Users\TN256\OneDrive\ドキュメント\謝研\AIProgram\"nn
 data24.txt
 データの個数:4

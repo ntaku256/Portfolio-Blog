@@ -4,7 +4,7 @@
 - <https://zenn.dev/tara_is_ok/scraps/fcdd5bf4e44b75>
 
 ### Directory
-```
+```txt
 root
 ┣ go-todo-api (backend)
 ┃  ┣ controller
@@ -36,10 +36,10 @@ root
 
 # Run
 - frontend
-```
+```shell
 npm start dev
 ```
 - backend
-```
+```go
 go run main.go
 ```

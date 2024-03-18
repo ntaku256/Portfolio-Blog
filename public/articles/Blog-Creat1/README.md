@@ -1,7 +1,7 @@
 # 静的ページの立ち上げ
 1. Githubのリポジトリを作成
 2. Reactのプロジェクトを作る
-```
+```shell
 npx create-react-app {プロジェクト名}
 ```
 ```shell
@@ -39,7 +39,7 @@ https://zenn.dev/acha_n/articles/deploy-react-app-with-github-actions
 
 次にワークフローを作成します。プロジェクトのルートに`.github`というディレクトリを作成し、その中に`workflows`というディレクトリを作成します。次に「workflows」の中に .ymlファイルを作成します。`.yml` ファイルの名前は何でも OK です。
 ### deploy-gh-pages.yml
-```yml
+```yml:deploy-gh-pages.yml
 name: Deploy GitHub Pages #workflow-name
 
 on:

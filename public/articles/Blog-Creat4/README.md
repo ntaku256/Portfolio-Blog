@@ -11,18 +11,17 @@ https://naoto-kagaya.com/articles/2023-01-24-react-markdown
 
 # 成功
 - 参考記事を参考にすることで`markdown形式`で表示できた。
-- ただ`inline, className, children`の定義をせず、エラーが出たので少し修正している
+- ただ`inline` , `className` , `children`の定義をせず、エラーが出たので少し修正している
 - markdownファイルのパス指定は
 ```tsx
 fetch(`${basePath}/articles/${postId}/README.md`)
-posId : mdファイルの名前
+//posId : mdファイルの名前
 ```
 ### 参考記事
 - **react-markdownのメモ**<br>
 https://zenn.dev/techexplorer/scraps/4b780b47216f7d
 
-### CodeBlock.tsx
-```tsx
+```tsx:CodeBlock.tsx
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
@@ -52,10 +51,8 @@ const CodeBlock: React.FC<CodeBlockProps>  = ({ inline, className, children }) =
 };
 
 export default CodeBlock;
-
 ```
-### Article.tsx
-```tsx
+```tsx:Article.tsx
 <ReactMarkdown
   remarkPlugins={[remarkGfm]} 
   className='markdown-body'
@@ -76,12 +73,10 @@ Type 'FunctionComponent<CodeBlockProps>' is not assignable to type 'FunctionComp
 # imageの表示
 - 画像の表示は失敗した参考記事のものを使用している
 - パスの指定は
-```
+```tsx
 /images/${postId}/{image_name}
 ```
-
-**MdImage.tsx**
-```tsx
+```tsx:MdImage.tsx
 import { FC } from "react";
 
 type MdImageType = {

@@ -10,7 +10,7 @@ ITエンジニアとしてのスキルアップと、
 
 # Directory
 - 2024/03/06
-```python
+```python:Directory
 portfolio
 ┣ .github/workflow/depoloy-gh-pages.yml #Github Actionsでデプロイするためのymlファイル
 ┣ node_modules
