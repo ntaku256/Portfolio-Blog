@@ -1,6 +1,6 @@
 # 起こったこと
 - `React Router`のところで合っているはずなのに、エラーを吐いた
-```shell
+```tsx
 react-dom.production.min.js:189 Error
     at s (history.ts:494:11)
     at O (hooks.tsx:104:3)

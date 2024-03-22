@@ -70,7 +70,6 @@ const Article = () => {
             const matchname = /language-(\w+)(:.+)/.exec(className || '');
             const lang = match && match[1] ? match[1] : "";
             const name = matchname && matchname[2] ? matchname[2].slice(1) : '';
-            console.log(lang)
             if (lang) {
               return (
                 <div>
