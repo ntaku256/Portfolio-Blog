@@ -129,7 +129,7 @@ hr {
 
 @media (min-width: 500px) {
   .article-content {
-    height: 240px;
+    height: 150px;
   }
   .article-title {
     font-size: 20px;
@@ -142,6 +142,18 @@ hr {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     min-width: 220px;
+  }
+  .article-postGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 16px;
+  }
+  .article-postContainer {
+    text-decoration: none;
+    color: inherit ;
+    margin-bottom: 16px;
+    display: block;
   }
 }
 
@@ -160,6 +172,18 @@ hr {
     padding: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+  }
+  .article-postGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 16px;
+  }
+  .article-postContainer {
+    text-decoration: none;
+    color: inherit ;
+    margin-bottom: 16px;
+    display: block;
   }
 }
 

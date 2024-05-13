@@ -44,9 +44,9 @@ const Blog = () => {
           value={searchTerm}
           onChange={handleSearch}
       />
-      <div style={styles.postGrid}>
+      <div className='article-postGrid'>
         {filteredPosts.map(post => (
-            <Link to={`/Article/${post.id}`} key={post.id} style={styles.postContainer}>
+            <Link to={`/Article/${post.id}`} key={post.id} className='article-postContainer'>
             <div className='article-postContent'>
                 <h2 className='article-title'>{post.title}</h2>
                 <hr />
@@ -59,20 +59,5 @@ const Blog = () => {
     </div>
   );
 };
-
-const styles = {
-    postGrid: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(3, 1fr)',
-      gap: '20px',
-      padding: 16,
-    },
-    postContainer: {
-      textDecoration: 'none',
-      color: 'inherit',
-      marginBottom: 16,
-      display: 'block'
-    }
-  };
 
 export default Blog;
