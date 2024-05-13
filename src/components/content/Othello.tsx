@@ -28,6 +28,23 @@ const Game: React.FC<GameProps> = () => {
   const [player, setPlayer] = useState<string>(initPlayer);
   const [gameStatus, setGameStatus] = useState<string>("playing");
 
+  const initonClick = () => {
+    setBoard((prevBoard) => {
+      const newBoard: string[][] = [...prevBoard];
+      for (let i = 0; i < 8; i++) {
+        for (let j = 0; j < 8; j++) {
+          newBoard[i][j] = "";
+        }
+      }
+      newBoard[size / 2 - 1][size / 2 - 1] = "⚫︎";
+      newBoard[size / 2][size / 2] = "⚫︎";
+      newBoard[size / 2 - 1][size / 2] = "⚪︎";
+      newBoard[size / 2][size / 2 - 1] = "⚪︎";
+      return newBoard;
+    });
+    setPlayer((prevPlayer) => (prevPlayer = "⚫︎"));
+    setPutables(() => calculatePutables(board, player));
+  }
   const onClickCell = (y: number, x: number) => {
     if (putables[y][x]) {
       console.log("put");
@@ -176,6 +193,9 @@ const Game: React.FC<GameProps> = () => {
           ))}
         </div>
       ))}
+      <button className="othello-button" onClick={initonClick}>
+        リセット
+      </button>
     </div>
   );
 };

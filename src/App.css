@@ -126,6 +126,9 @@ hr {
 .markdown-body li{
   font-size: 20px !important;
 }
+.othello-button {
+  
+}
 
 @media (min-width: 500px) {
   .article-content {
