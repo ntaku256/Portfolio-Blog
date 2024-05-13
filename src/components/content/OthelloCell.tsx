@@ -25,3 +25,4 @@ type CellProps = {
   };
   
   export default Cell;
+  
