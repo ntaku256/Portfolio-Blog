@@ -23,7 +23,10 @@ const Header = () => {
                                 <Link to="/About" className="select">/About</Link>
                             </li>
                             <li>
-                                <Link to="/">/Blog</Link>
+                                <Link to="/Othello">/Othello</Link>
+                            </li>
+                            <li>
+                                <Link to="/" >/Blog</Link>
                             </li>
                         </ul> 
                     }/>
@@ -33,7 +36,23 @@ const Header = () => {
                                 <Link to="/About">/About</Link>
                             </li>
                             <li>
+                                <Link to="/Othello" >/Othello</Link>
+                            </li>
+                            <li>
                                 <Link to="/" className="select">/Blog</Link>
+                            </li>
+                        </ul> 
+                    }/>
+                    <Route path='/Othello' element={
+                        <ul>
+                            <li>
+                                <Link to="/About">/About</Link>
+                            </li>
+                            <li>
+                                <Link to="/Othello" className="select">/Othello</Link>
+                            </li>
+                            <li>
+                                <Link to="/" >/Blog</Link>
                             </li>
                         </ul> 
                     }/>
